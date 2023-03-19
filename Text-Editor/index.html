@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>text editor</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Small-Icons-Color-icons.css">
+</head>
+
+<body style="background: var(--bs-border-color-translucent);border-color: #FFA500;border-radius: 0px;">
+    <div style="position: fixed;top: 0;z-index: 1;width: 100%;background: #FA503D;height: 85px;">
+        <div class="row" style="height: 40px;">
+            <div class="col d-lg-flex justify-content-lg-start align-items-lg-start">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-copy" style="border-color: var(--bs-btn-disabled-color);"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fa fa-cut"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-paste"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;" onclick="modal-1" data-toggle="modal" data-target="#modal-1"><i class="fas fa-file-pdf"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-file-word"></i></button>
+            </div>
+            <div class="col d-lg-flex justify-content-lg-start align-items-lg-start">
+                <small class="d-lg-flex" style="color: var(--bs-gray-100);">Untitled-01</small>
+            </div>
+        </div>
+        <div class="row row-cols-1 d-flex justify-content-center align-items-center justify-content-lg-start align-items-lg-start" style="height: 40px;width: 1009px;">
+            <div class="col-lg-12 d-lg-flex justify-content-lg-start align-items-lg-start" style="width: auto;">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-bold"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-white);margin: 5px;"><i class="fa fa-italic"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-underline"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-strikethrough"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-subscript"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fa fa-superscript"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-tint"></i></button>
+            </div>
+            <div class="col-lg-12 d-lg-flex align-items-lg-start" style="width: auto;">
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-align-right"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-align-center"></i></button>
+                <button class="btn btn-primary" type="button" style="background: var(--bs-border-color-translucent);border-color: var(--bs-btn-disabled-color);margin: 5px;"><i class="fas fa-align-left"></i></button>
+            </div>
+            <div class="col" style="width: auto;">
+                <span class="fs-5 d-flex justify-content-center align-items-center align-content-center" style="width: 200px;font-weight: bold;">
+                    <input type="text" style="border-color: var(--bs-border-color-translucent);">
+                </span>
+            </div>
+            <div class="col" style="width: auto;">
+                <span class="fs-5 d-flex justify-content-center align-items-center align-content-center" style="font-style: italic;height: 40px;width: 70px;">
+                    <input type="text" style="width: 70px;border-color: var(--bs-border-color-translucent);">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div style="position: relative;padding: 20px;">
+        <div class="container" style="height: 100vh;width: auto;background: var(--bs-gray-100);border-color: var(--bs-border-color-translucent);border-top-color: var(--bs-border-color-translucent);border-right-color: var(--bs-border-color-translucent);border-bottom-color: var(--bs-border-color-translucent);border-left-color: var(--bs-border-color-translucent);margin: 100px;padding: 100px;" contenteditable="true">
+            <small style="position: sticky;background: var(--bs-white);"></small>
+        </div>
+    </div>
+    <footer style="position: fixed;bottom: 0;z-index: 1;width: 100%;background: #B6B6B4; height: 15px;">
+        <div class="row">
+            <div class="col d-lg-flex justify-content-lg-start align-items-lg-start">
+                <span class="d-flex justify-content-center align-items-center">
+                    <small>Page 1 of 1</small>
+                    <small>
+                        <span id="words">0</span>&nbsp;&nbsp;words
+                    </small>
+                    <small>
+                        <span id="lines">0</span>&nbsp;&nbsp;lines
+                    </small>
+                </span>
+            </div>
+            <div class="col d-lg-flex justify-content-lg-end align-items-lg-end">
+                <span>
+                    <button class="btn btn-primary d-flex justify-content-center align-items-center align-items-sm-center" id="minus" type="button" style="color: var(--bs-dark);background: var(--bs-border-color-translucent);border-color: var(--bs-border-color-translucent);height: 28px;width: 18px;">-</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="currentColor"></path>
+                    </svg>
+                    <small class="d-flex justify-content-center align-items-center align-items-sm-center">
+                        <input class="form-range d-flex justify-content-center align-items-center align-items-sm-center" type="range" style="margin-left: 10px;" min="40" max="185" value="100" id="zoom-range">
+                    </small>
+                    <button class="btn btn-primary d-flex justify-content-center align-items-center align-items-sm-center" id="plus" type="button" style="border-color: var(--bs-border-color-translucent);background: var(--bs-border-color-translucent);width: 18px;height: 28px;color: var(--bs-gray-900);">+</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z" fill="currentColor"></path>
+                    </svg>
+                    <small class="d-flex justify-content-center align-items-center align-items-sm-center" style="width: 35.11px;height: 21px;">
+                        <small id="range-percent">100%</small>&nbsp;%
+                    </small>
+                </span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div> 
+      <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: var(--bs-red);">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: var(--bs-gray-100);">Export to PDF</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input">File Name</label>
+                            <input class="form-control" type="text" placeholder="Enter file name">
+                        </div>
+                        <div class="form-group">
+                            <label for="input">Orientation</label>
+                            <select class="form-select" id="select-1">
+                                <optgroup label="Select option">
+                                    <option value="default">Portrait</option>
+                                    <option value="option">Landscape</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="input">Page Size</label>
+                            <select class="form-select" id="select-2">
+                                <optgroup label="Select option">
+                                    <option value="default">A4</option>
+                                    <option value="option">Letter</option>
+                                    <option value="option">Tabloid</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" style="background-color: var(--bs-gray-100);color: var(--bs-red);" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" type="button" style="background-color: var(--bs-gray-100);color: var(--bs-red);">Export</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
